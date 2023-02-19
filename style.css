@@ -1,0 +1,265 @@
+* {
+    font-family: 'Nunito Sans';
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 auto;
+    padding: 3px;
+    background-color: #fff;
+  }
+  
+  .game-container {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  
+img{
+    height: 150px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.about{
+    display: grid;
+    max-width: 900px;
+    position: relative;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 200px 140px;
+    grid-template-areas:  "heading heading heading"
+                          " picture  challenge challenge"
+                          "instructions instructions instructions "
+                          ;   
+}
+
+.heading{
+    grid-area: heading;
+    justify-self: center;
+}
+
+.pic {
+    grid-area: picture;
+    justify-self: center;
+    align-self: center;
+}
+.challenge {
+    grid-area: challenge;
+    align-self: center;
+    justify-self: center;
+}
+
+.instructions {
+    grid-area: instructions;
+    align-self: center;
+    justify-self: center;
+}
+.instruction {
+    grid-area: instruction;
+}
+
+@media only screen and (max-width: 480px){
+    
+    h1{
+        font-size: 25px;
+        
+    }
+    h2{
+        font-size: 15px;
+       
+    }
+   img{
+    height: 100px;
+   }
+   .instructions p{
+    font-size: 12px;
+   }
+   .game-container{
+    width: 90%;
+   }
+   
+}
+
+  .rounds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .round-label {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+  
+  .guess {
+    min-width: 303px;
+    height: 328px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 19px;
+  }
+  
+  .guessing-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+  
+  .guess-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .guess-label {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .score-label {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .target-guess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .computer-guess {
+    background-color:#fef9f5;
+    border-radius: 10px;
+  }
+  
+  #computer-guess {
+    font-size: 50px;
+    font-weight: 700;
+    color: #b95b28;
+  }
+  
+  .human-guess {
+    border: 0.5px solid #f6dbc8;
+    border-radius: 10px;
+  }
+  
+  .guess input {
+    height: 90px;
+    width: 90px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    border: 0.5px solid #f6dbc8;
+    border-radius: 10px;
+  }
+  
+  .number-controls {
+    font-size: 0;
+    margin-bottom: 23px;
+  }
+  
+  .number-control {
+    border: 0.5px solid #f6dbc8;
+    display: inline-block;
+    width: 45px;
+    height: 35px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #b74b18;
+    cursor: pointer;
+  }
+  
+  .number-controls button[disabled] {
+    color: #f8f8f8;
+    cursor: default;
+  }
+  
+  .left {
+    border-top-left-radius: 22.5px;
+    border-bottom-left-radius: 22.5px;
+  }
+  
+  .right {
+    border-top-right-radius: 22.5px;
+    border-bottom-right-radius: 22.5px;
+    border-left-width: 0px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .button {
+    background-color:#f2ded0;
+    color: #171110;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  
+  #guess {
+    padding: 20px;
+    width: 169px;
+    height: 59px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  #next-round {
+    width: 179px;
+    height: 64px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    
+  }
+    
+  .button[disabled] {
+    background-color: #f2ded0;
+    color: #171110;
+    cursor: default;
+    border: none;;
+  }
+  
+  .instructions {
+    background-color: #f8e9de;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+  }
+  
+  .instruction {
+    width: 180px;
+    padding: 2px;
+    text-align: center;
+  }
+  
+  .instructions h3 {
+    font-size: 14px;
+  }
+  
+  
+  .winning-text, .winning-text[disabled] {
+    color: #de5a1c;
+    font-weight: 700;
+  }
